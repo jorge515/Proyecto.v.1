@@ -1,0 +1,13 @@
+{% extends "usuarios/layout.html"%}
+
+{%block body%}
+  { % if mensaje % }
+    <div> {{ % mensaje %}}</div>
+  { % endif % }    <form action="{% url "login" %}" method="POST">
+        {% csrf_token %}
+        <input type="text", name="username",placeholder="Usuarios">
+        <input type="text", name="username",placeholder="Usuarios">
+        <input type="submit", value="Login">
+    </form>
+
+{% end block %}
